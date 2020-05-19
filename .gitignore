@@ -1,8 +1,6 @@
 .vscode/
 .vscode/settings.json
-env/
-env/*
 *.zip
 *.tar.gz
-salute/__pycache__/
-salute/__pycache__/*
+__pycache__/
+__pycache__/*

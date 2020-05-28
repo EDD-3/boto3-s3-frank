@@ -31,3 +31,12 @@ def upload_file():
 
     except Exception as e:
         return jsonify({'Exception': e}),500
+
+@app.route("/api/images", methods=["GET"])
+def get_files():
+    try:
+        pass
+    except Exception as e:
+        pass
+    finally:
+        pass

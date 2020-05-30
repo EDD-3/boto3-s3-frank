@@ -17,11 +17,7 @@ from api.helpers import *
 def index():
     return 'Hello'
 
-<<<<<<< HEAD
 @app.route('/api/images', methods=['POST'])
-=======
-@app.route("/api/images", methods=["POST"])
->>>>>>> 6900dbfd5edeb1b1dfa3a689015f7716dc505892
 def upload_file():
     try:
         file_url = json.loads(request.data)['imageUrl']
@@ -29,11 +25,7 @@ def upload_file():
 
         if response.code == 200:
             output = upload_file_to_s3(response)
-<<<<<<< HEAD
             return jsonify({ 'imageUrl': output }), 200
-=======
-            return jsonify({ "imageUrl": output }), 200
->>>>>>> 6900dbfd5edeb1b1dfa3a689015f7716dc505892
 
     except Exception as e:
         return jsonify({'Exception': e}),500
@@ -44,9 +36,5 @@ def get_files():
         response = get_bucket_files()
         return jsonify(response), 200
     except Exception as e:
-<<<<<<< HEAD
         return jsonify({'Exception': e}),500
-=======
-        return jsonify({"Exception": e}),500
->>>>>>> 6900dbfd5edeb1b1dfa3a689015f7716dc505892
         
